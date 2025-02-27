@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Stats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>GitHub User Stats</h2>
+    <input type="text" id="username" placeholder="Enter GitHub Username">
+    <button onclick="fetchStats()">Get Stats</button>
+
+    <h3>User Summary</h3>
+    <p class="paragraph" id="summary"></p>
+
+
+    <h3>Suggestions</h3>
+    <p class="paragraph" id="suggestions"></p>
+
+    <h3>Repositories</h3>
+    <div id="chart"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
